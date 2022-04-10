@@ -20,3 +20,8 @@ body {
 .space {
   width: 50px;
 }
+
+.char path {
+  /* stroke-dasharray: 1000;
+  stroke-dashoffset: 0; */
+}
