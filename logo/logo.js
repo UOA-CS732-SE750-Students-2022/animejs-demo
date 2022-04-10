@@ -32,8 +32,18 @@ const heartsDrop = {
 
 const heartLeftSplit = {
     targets: '#left-heart',
-    translateX: -410,
-    duration: 1000
+    translateX: [
+        { value: 410, duration: 0 },
+        { value: 0, duration: 500 }
+    ],
+
+
+    duration: 1000,
+    direction: 'reverse',
+}
+const fillLeftHeart = {
+    targets: "#left-heart path",
+    fill: "#FB7299",
 }
 
 const heartsDown = {
@@ -42,16 +52,32 @@ const heartsDown = {
     duration: 300,
 }
 
-
-
 const timeline = anime.timeline({
 })
 
 timeline
     .add(heartsDrop)
     .add(heartLeftSplit)
+    .add(fillLeftHeart, '-=500')
     .add(drawCharOutlines)
     .add(fillChars, '-=500')
     .add(staggerTranslateY, '-=1000')
     .add(heartsDown)
 
+
+
+var tapHeart = anime({
+    targets: '#left-heart',
+    translateY: [
+        { value: 320, duration: 0 },
+        { value: 220, duration: 500 },
+        { value: 320, duration: 800 }
+    ],
+    rotate: {
+        value: '1turn',
+        easing: 'easeInOutSine'
+    },
+    autoplay: false,
+});
+
+document.querySelector('#left-heart').onclick = tapHeart.play
