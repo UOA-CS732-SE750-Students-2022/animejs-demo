@@ -52,6 +52,13 @@ const heartsDown = {
     duration: 300,
 }
 
+const heartsExpand = {
+    targets: '.heart',
+    rotate: '1turn',
+    duration: 2000,
+    delay: anime.stagger(300)
+}
+
 const timeline = anime.timeline({})
 
 timeline
@@ -62,6 +69,7 @@ timeline
     .add(fillChars, '-=500')
     .add(staggerTranslateY, '-=1000')
     .add(heartsDown)
+    .add(heartsExpand, '+=500')
 
 
 const tapLeftHeart = anime({
