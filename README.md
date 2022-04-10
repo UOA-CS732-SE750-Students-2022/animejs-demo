@@ -1,6 +1,6 @@
 # AnimeJS Demo
 
-This repo is a walkthrough of the AnimeJS animation library to help you learn AnimeJS.
+This repo is a demo of the AnimeJS animation library to help you learn AnimeJS.
 
 It has the following four folders, each of which contains one JS project. 
 
@@ -12,7 +12,11 @@ It has the following four folders, each of which contains one JS project.
 
 ## To start
 
-If you're here to learn AnimeJS, I suggest you start by looking at the **0-all-in-one-demo**, which is a small example of what you can make with AnimeJS. However, I don't recommend looking at the code quite yet! Before that, let's walk through **1-basics**, **2-intermediate**, and **3-advanced** (in that order), which will give you a good understanding of AnimeJS. Then you should look at **0-all-in-one-demo**
+If you're here to learn AnimeJS, I suggest you start by looking at the **0-all-in-one-demo**, which is a small example of what you can make with AnimeJS. However, I don't recommend looking at the code quite yet! Before that, let's walk through **1-basics**, **2-intermediate**, and **3-advanced** (in that order), which will give you a good understanding of AnimeJS. Then you should look at **0-all-in-one-demo** and have a fiddle, and see what you can find!
+
+### How to set up this repo?
+
+Simply clone this repo, and open up each of the folders listed above. To see the animations, simply open the html file in a browser.
 
 # Quick Video Demos 
 
@@ -38,3 +42,5 @@ https://user-images.githubusercontent.com/62003343/162616795-93288a6c-2684-4597-
 
 https://user-images.githubusercontent.com/62003343/162616760-3a33ded2-348a-4c52-889d-51b7436ff922.mp4
 
+
+# Enjoy!
