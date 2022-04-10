@@ -19,6 +19,6 @@ body {
 }
 
 #demo-svg path {
-  stroke-dasharray: 1000;
+  stroke-dasharray: 550;
   stroke-dashoffset: 0;
 }
