@@ -21,14 +21,10 @@ body {
   width: 20px;
 }
 
-.char path {
-  /* stroke-dasharray: 1000;
-  stroke-dashoffset: 0; */
-}
-
 .heart {
   position: absolute;
   margin-top: -300px;
+  cursor: pointer;
 }
 
 #left-heart {

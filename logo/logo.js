@@ -80,18 +80,16 @@ const tapLeftHeart = anime({
 const tapRightHeart = anime({
     targets: '#right-heart',
     keyframes: [
-        { translateY: 320, duration: 0 },
+        { translateY: 520, duration: 0 },
         { translateY: 120, duration: 100, },
         { translateY: 320, duration: 150, scaleY: 0.85 },
-        { translateY: 180, duration: 170 },
+        { translateY: 180, duration: 170, scaleY: 1 },
         { translateY: 320, duration: 190, scaleY: 0.9 },
-        { translateY: 260, duration: 200 },
-        { translateY: 320, duration: 210, scaleY: 1 },
+        { translateY: 260, duration: 200, scaleY: 1 },
+        { translateY: 320, duration: 210, },
     ],
     autoplay: false,
 });
-
-
 
 document.querySelector('#left-heart').onclick = tapLeftHeart.play
 document.querySelector('#right-heart').onclick = tapRightHeart.play
