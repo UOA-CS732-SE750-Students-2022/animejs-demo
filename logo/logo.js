@@ -1,5 +1,5 @@
 const staggerTranslateY = {
-    targets: ".char",
+    targets: [".char"],
     translateY: 30,
     delay: anime.stagger(50),
     direction: 'alternate',
@@ -23,7 +23,7 @@ const fillChars = {
 }
 
 
-const heartsDown = {
+const heartsDrop = {
     targets: '.heart',
     translateY: 290,
     duration: '1000',
@@ -32,26 +32,26 @@ const heartsDown = {
 
 const heartLeftSplit = {
     targets: '#left-heart',
-    translateX: -440,
+    translateX: -410,
     duration: 1000
+}
+
+const heartsDown = {
+    targets: '.heart',
+    translateY: 320,
+    duration: 300,
 }
 
 
 
-
-
-
-
-
-
 const timeline = anime.timeline({
-    loop: true,
 })
 
 timeline
-    .add(heartsDown)
+    .add(heartsDrop)
     .add(heartLeftSplit)
     .add(drawCharOutlines)
     .add(fillChars, '-=500')
     .add(staggerTranslateY, '-=1000')
+    .add(heartsDown)
 

@@ -18,7 +18,7 @@ body {
 }
 
 .space {
-  width: 50px;
+  width: 20px;
 }
 
 .char path {
@@ -29,7 +29,6 @@ body {
 .heart {
   position: absolute;
   margin-top: -300px;
-  margin-left: 15px;
 }
 
 .emptyChar {
