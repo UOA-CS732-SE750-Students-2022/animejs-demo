@@ -22,7 +22,6 @@ const fillChars = {
 
 }
 
-
 const heartsDrop = {
     targets: '.heart',
     translateY: 290,
@@ -52,8 +51,7 @@ const heartsDown = {
     duration: 300,
 }
 
-const timeline = anime.timeline({
-})
+const timeline = anime.timeline({})
 
 timeline
     .add(heartsDrop)
@@ -65,19 +63,35 @@ timeline
     .add(heartsDown)
 
 
-
-var tapHeart = anime({
+const tapLeftHeart = anime({
     targets: '#left-heart',
     translateY: [
         { value: 320, duration: 0 },
-        { value: 220, duration: 500 },
+        { value: 120, duration: 500 },
         { value: 320, duration: 800 }
     ],
     rotate: {
         value: '1turn',
-        easing: 'easeInOutSine'
+        easing: 'easeInQuad'
     },
     autoplay: false,
 });
 
-document.querySelector('#left-heart').onclick = tapHeart.play
+const tapRightHeart = anime({
+    targets: '#right-heart',
+    keyframes: [
+        { translateY: 320, duration: 0 },
+        { translateY: 120, duration: 100, },
+        { translateY: 320, duration: 150, scaleY: 0.85 },
+        { translateY: 180, duration: 170 },
+        { translateY: 320, duration: 190, scaleY: 0.9 },
+        { translateY: 260, duration: 200 },
+        { translateY: 320, duration: 210, scaleY: 1 },
+    ],
+    autoplay: false,
+});
+
+
+
+document.querySelector('#left-heart').onclick = tapLeftHeart.play
+document.querySelector('#right-heart').onclick = tapRightHeart.play
