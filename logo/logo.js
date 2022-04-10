@@ -18,7 +18,8 @@ const fillChars = {
     targets: '.char path',
     delay: anime.stagger(50),
     easing: 'easeInOutQuad',
-    fill: '#000',
+    fill: '#AAA',
+    stroke: '#AAA'
 
 }
 
@@ -80,13 +81,13 @@ const tapLeftHeart = anime({
 const tapRightHeart = anime({
     targets: '#right-heart',
     keyframes: [
-        { translateY: 520, duration: 0 },
-        { translateY: 120, duration: 100, },
-        { translateY: 320, duration: 150, scaleY: 0.85 },
-        { translateY: 180, duration: 170, scaleY: 1 },
-        { translateY: 320, duration: 190, scaleY: 0.9 },
-        { translateY: 260, duration: 200, scaleY: 1 },
-        { translateY: 320, duration: 210, },
+        { translateY: 320, duration: 0 },
+        { translateY: 60, duration: 150, },
+        { translateY: 320, duration: 200, scaleY: 0.85 },
+        { translateY: 180, duration: 230, scaleY: 1 },
+        { translateY: 320, duration: 250, scaleY: 0.9 },
+        { translateY: 260, duration: 260, scaleY: 1 },
+        { translateY: 320, duration: 265, },
     ],
     autoplay: false,
 });
