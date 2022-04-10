@@ -2,7 +2,6 @@
 let timeline = anime.timeline({
     duration: 750,
     loop: true,
-    diretion: 'alternate'
 })
 
 // Add animations to the timeline
