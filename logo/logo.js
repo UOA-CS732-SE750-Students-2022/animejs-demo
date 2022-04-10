@@ -3,7 +3,6 @@ const staggerTranslateY = {
     translateY: 30,
     delay: anime.stagger(50),
     direction: 'alternate',
-    easing: 'easeInOutSine',
 }
 
 
@@ -11,7 +10,8 @@ const drawCharOutlines = {
     targets: '.char path',
     strokeDashoffset: [anime.setDashoffset, 0],
     easing: 'easeInOutQuad',
-    delay: anime.stagger(150)
+    delay: anime.stagger(150),
+    stroke: '#000'
 }
 
 const fillChars = {
@@ -22,9 +22,36 @@ const fillChars = {
 
 }
 
+
+const heartsDown = {
+    targets: '.heart',
+    translateY: 290,
+    duration: '1000',
+    direction: 'reverse'
+}
+
+const heartLeftSplit = {
+    targets: '#left-heart',
+    translateX: -440,
+    duration: 1000
+}
+
+
+
+
+
+
+
+
+
 const timeline = anime.timeline({
     loop: true,
 })
 
-timeline.add(drawCharOutlines).add(fillChars, '-=1000').add(staggerTranslateY, '-=1500')
+timeline
+    .add(heartsDown)
+    .add(heartLeftSplit)
+    .add(drawCharOutlines)
+    .add(fillChars, '-=500')
+    .add(staggerTranslateY, '-=1000')
 

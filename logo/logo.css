@@ -25,3 +25,13 @@ body {
   /* stroke-dasharray: 1000;
   stroke-dashoffset: 0; */
 }
+
+.heart {
+  position: absolute;
+  margin-top: -300px;
+  margin-left: 15px;
+}
+
+.emptyChar {
+  width: 110px;
+}
